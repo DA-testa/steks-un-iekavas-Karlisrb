@@ -18,10 +18,12 @@ def find_mismatch(text):
             
         elif next_char in ")]}":
             if not opening_brackets_stack:
+                
                 return i + 1
                 
-            LastBrc = opening_brackets_stack.pop()
-            if not are_matching(pedejais.char, next_char):
+            lastbrc = opening_brackets_stack.pop()
+            if not are_matching(lastbrc.char, next_char):
+                
                 return i + 1
                 
     if opening_brackets_stack:
@@ -32,9 +34,7 @@ def main():
     text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
-    
-    if __name__ == "__main__":
+
+
+if __name__ == "__main__":
     main()
-
-
-
