@@ -20,7 +20,7 @@ def find_mismatch(text):
             if not opening_brackets_stack:
                 return i + 1
                 
-            pedejais = opening_brackets_stack.pop()
+            LastBrc = opening_brackets_stack.pop()
             if not are_matching(pedejais.char, next_char):
                 return i + 1
                 
