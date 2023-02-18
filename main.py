@@ -30,14 +30,10 @@ def find_mismatch(text):
 
 
 def main():
-    input_type = input("Enter F to read from file or I to input the brackets manually: ")
-    if input_type.lower() == "f":
-        
-        filename = input("Enter file name: ")
-        with open(filename) as f:
-            text = f.read()
-    elif input_type.lower() == "i":
-        text = input("Enter brackets: ")
+    input_type = input()
+    
+    if input_type.lower() == "i":
+        text = input()
     else:
         print("Invalid input type")
         return
